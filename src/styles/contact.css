@@ -1,0 +1,10 @@
+/* Contact: heading anchored to the bottom right, wireframe on the left. */
+.contact { justify-content: flex-end; padding-bottom: var(--section-pad); }
+.contact .wrap { width: 100%; }
+.contact .inner { margin-left: auto; text-align: right; display: flex; flex-direction: column; align-items: flex-end; }
+.contact h2 { font-size: clamp(52px, 10vw, 132px); line-height: 0.98; letter-spacing: -0.035em; }
+.contact p { color: var(--fg-dim); font-size: 18px; margin: 26px 0 0; max-width: 48ch; }
+.contact .mail { font-family: var(--font-mono); font-size: 14px; color: var(--fg-mute); margin-top: 10px; user-select: all; }
+
+footer { position: relative; z-index: 1; border-top: 1px solid var(--line); padding-block: 28px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; color: var(--fg-mute); }
+footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }

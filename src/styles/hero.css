@@ -1,0 +1,31 @@
+/* Hero: content starts ~16% from the left on large screens and keeps to the left half,
+   leaving the right half to the wireframe. */
+.hero {
+  min-height: 100vh;
+  min-height: calc(100svh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+  display: flex;
+  align-items: center;
+  padding-block: 96px;
+}
+.hero .wrap {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px), 16vw);
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
+}
+.hero-inner { max-width: min(720px, 52vw); }
+.hero h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(52px, 7vw, 124px); line-height: 0.95; letter-spacing: -0.035em; margin: 26px 0 32px; white-space: nowrap; }
+.hero h1 .outline { -webkit-text-stroke-width: clamp(1px, 0.18vw, 2px); }
+.stack { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.22em; color: var(--fg-dim); }
+.lede { font-size: clamp(17px, 1.35vw, 20px); color: var(--fg-mute); max-width: 46ch; margin: 24px 0 38px; font-weight: 400; line-height: 1.7; }
+
+.cta { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn { font-family: var(--font-body); font-size: 17px; padding: 16px 28px; border-radius: 10px; border: 1px solid var(--line-strong); background: var(--bg-raise); color: var(--fg); text-decoration: none; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
+.btn.primary { border-color: var(--accent); background: rgba(238, 138, 68, 0.07); }
+.btn:hover { border-color: var(--accent); background: var(--accent-soft); transform: translateY(-1px); }
+
+@media (max-width: 900px) {
+  .hero h1 { white-space: normal; }
+  .hero-inner { max-width: none; }
+}

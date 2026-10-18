@@ -1,0 +1,25 @@
+/* Featured Projects: year | title, category, details on open | repository arrow */
+.projects { margin-top: 16px; }
+.proj { display: grid; grid-template-columns: 120px minmax(0, 1fr) 56px; column-gap: 24px; padding-block: 44px; border-bottom: 1px solid var(--line); cursor: default; outline: none; }
+.proj:first-child { border-top: 1px solid var(--line); }
+.proj .yr { font-family: var(--font-body); font-size: 17px; color: var(--fg-mute); font-variant-numeric: tabular-nums; padding-top: 0.85em; line-height: 1; }
+.proj h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(30px, 3.8vw, 50px); letter-spacing: -0.025em; line-height: 1.1; margin: 0; transition: color 0.3s; }
+.proj .cat { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--fg-mute); margin-top: 10px; }
+.proj .more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.35s; opacity: 0; }
+.proj .more > div { overflow: hidden; }
+.proj .more p { margin: 20px 0 0; color: var(--fg-dim); font-size: 18px; max-width: 62ch; font-weight: 300; line-height: 1.65; }
+.proj .more .tags { margin-top: 18px; padding-bottom: 2px; }
+.proj .more .tag { background: transparent; border-color: var(--line-strong); color: var(--fg-mute); font-size: 13px; }
+.proj .arrow { justify-self: end; align-self: start; display: grid; place-items: center; width: 52px; height: 52px; margin-top: -4px; border-radius: 12px; color: var(--accent); font-size: 24px; text-decoration: none; opacity: 0.55; transition: opacity 0.3s, transform 0.3s, background 0.3s; }
+.proj .arrow:hover, .proj .arrow:focus-visible, .proj.open .arrow { opacity: 1; }
+.proj .arrow:hover { transform: translate(2px, -2px); background: var(--accent-soft); }
+.proj .arrow:focus-visible { outline: 2px solid var(--accent); outline-offset: 0; }
+.proj.open .more { grid-template-rows: 1fr; opacity: 1; }
+.proj.open h3 { color: var(--fg); }
+.proj:not(.open) h3 { color: var(--fg-dim); }
+
+@media (max-width: 900px) {
+  .proj { grid-template-columns: minmax(0, 1fr) 48px; row-gap: 8px; padding-block: 32px; }
+  .proj .yr { grid-column: 1 / -1; padding: 0; }
+  .proj .arrow { grid-row: 2; grid-column: 2; width: 48px; height: 48px; opacity: 1; }
+}

@@ -1,0 +1,12 @@
+/* Skills & Technologies and Education share one section, side by side. */
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 88px; }
+.rows { margin-top: 24px; border-top: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 20px; padding-block: 28px; border-bottom: 1px solid var(--line); align-items: baseline; }
+.row .k { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--fg-mute); }
+.row .v { color: var(--fg-dim); font-size: 18px; }
+.row .v h4 { font-family: var(--font-display); font-weight: 500; font-size: 28px; color: var(--fg); margin: 0 0 6px; letter-spacing: -0.015em; }
+.row .v small { display: block; color: var(--fg-mute); font-size: 15px; margin-top: 6px; }
+.row .v small.spec { color: var(--fg-dim); font-size: 16px; margin-top: 4px; font-style: italic; }
+
+@media (max-width: 900px) { .two { grid-template-columns: 1fr; gap: 72px; } }
+@media (max-width: 520px) { .row { grid-template-columns: 1fr; gap: 8px; } }

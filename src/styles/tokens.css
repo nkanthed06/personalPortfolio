@@ -1,0 +1,48 @@
+/* Shared design tokens: colors, type and layout used across every section. */
+:root {
+  /* surfaces and text */
+  --bg: #0a0b0c;
+  --bg-raise: #111214;
+  --bg-card: rgba(19, 20, 23, 0.82);
+  --line: #1d1f22;
+  --line-strong: #2c2f33;
+  --fg: #eceef3;
+  --fg-dim: #a9aeb8;
+  --fg-mute: #6e737c;
+
+  /* orange accent: name outline, buttons, project arrows */
+  --accent: #ee8a44;
+  --accent-hot: #ffa05a;
+  --accent-soft: rgba(238, 138, 68, 0.14);
+  --accent-glow: rgba(255, 140, 60, 0.45);
+
+  /* copper family shared by the wireframe background and the Experience timeline */
+  --mesh-deep: #4a1c10;
+  --mesh-main: #783017;
+  --mesh-hi: #a44b24;
+  --cu-deep: #602615;
+  --cu: #9b4626;
+  --cu-active: #b85d34;
+  --cu-text: #c96d43;
+  --cu-soft: rgba(184, 93, 52, 0.16);
+  --cu-glow: rgba(184, 93, 52, 0.38);
+  --rail: #272323;
+
+  /* sidebar tracker */
+  --tracker-on: #eceef3;
+  --tracker-off: #34302f;
+
+  /* typography */
+  --font-display: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  /* layout and spacing */
+  --wrap: 1180px;
+  --gutter: 24px;
+  --gutter-sm: 16px;
+  --section-pad: clamp(96px, 14vh, 160px);
+  --section-pad-sm: 88px;
+
+  color-scheme: dark;
+}
