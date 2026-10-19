@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- NK monogram: off-white N and orange K on the site's near-black, matching the hero name -->
+  <rect width="64" height="64" rx="14" fill="#0a0b0c"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="#2c2f33" stroke-width="2"/>
+  <path d="M9 47V17h6.5L26 37V17h6v30h-6.5L15 27v20z" fill="#eceef3"/>
+  <path d="M38 17v30M53 17L39.5 32 53 47" fill="none" stroke="#ee8a44" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter"/>
+</svg>

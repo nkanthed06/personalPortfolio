@@ -50,6 +50,7 @@ The build uses relative asset paths, so the contents of `dist/` can be hosted fr
 ```
 index.html              Page shell: background canvas, tracker, and mount points
 wrangler.jsonc          Cloudflare Workers deployment settings
+public/                 Tab icons (NK monogram), copied to the site root as-is
 .github/workflows/      GitHub Pages deployment
 src/
   main.js               Renders the sections in order and starts the interactive modules
