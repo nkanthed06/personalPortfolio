@@ -1,0 +1,11 @@
+// Cloudflare Workers deployment: serves the static Vite build from ./dist.
+// Cloudflare runs `npm run build`, then `npx wrangler deploy` reads this file.
+{
+  // must match the project name in the Cloudflare dashboard
+  "name": "personalportfolio",
+  "compatibility_date": "2026-10-18",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

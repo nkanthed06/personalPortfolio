@@ -6,6 +6,7 @@ dist/
 
 # Caches and logs
 .vite/
+.wrangler/
 *.log
 npm-debug.log*
 

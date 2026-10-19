@@ -40,10 +40,17 @@ npm install
 
 The build uses relative asset paths, so the contents of `dist/` can be hosted from any folder, including a GitHub Pages project URL.
 
+## Deploying
+
+- **GitHub Pages:** `.github/workflows/deploy.yml` builds and publishes the site on every push to `main`.
+- **Cloudflare Workers:** Cloudflare runs `npm run build` and then `npx wrangler deploy`, which serves `dist/` using `wrangler.jsonc`. The `name` in that file must match the project name in the Cloudflare dashboard.
+
 ## Project structure
 
 ```
 index.html              Page shell: background canvas, tracker, and mount points
+wrangler.jsonc          Cloudflare Workers deployment settings
+.github/workflows/      GitHub Pages deployment
 src/
   main.js               Renders the sections in order and starts the interactive modules
   data/                 Content: edit these files to update the site
